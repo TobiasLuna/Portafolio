@@ -1,0 +1,322 @@
+/*NAVBAR*/
+.navbar-container
+{
+    width: 100vw;
+    height: 50px;
+    background: #212F3C;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    z-index: 100;
+}
+.nav-item
+{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-content: center;
+    margin-top: 5px;
+
+}
+.item-nav
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255,0.4);
+
+}
+.activo
+{
+    color:#fff;
+
+}
+
+.nav-item a:hover
+{
+    color:#fff;
+}
+
+
+section[id]
+{
+    scroll-margin-top:70px
+}
+html{
+    scroll-behavior: smooth;
+}
+/*FIN NAVBAR*/
+header
+{
+    display: grid;
+    grid-template-areas: 'inicio'
+                        'habilidades'
+                        'trabajos'
+                        'contacto';
+    grid-template-columns: 60% 60% 60% auto;
+}
+header h3
+{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+section
+{
+    margin-top: 100px;
+    
+}
+/*INICIO*/
+.contenedor-secciones
+{
+    grid-area: inicio;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.contenedor-secciones p
+{
+    text-align: justify;
+    width: 500px;
+}
+.contenedor-secciones img
+{
+    width: 300px;
+    height: 300px;
+}
+/*FIN INICIO*/
+
+/*HABLIDADES*/
+.habilidades
+{
+    grid-area: habilidades;
+    background-color: #F2F4F4;
+}
+.habilidades ul
+{   
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color:#000;
+}
+
+.habilidades ul li
+{
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    cursor: default;
+}
+.habilidades ul li span
+{
+    font-size: 40px;
+}
+.habilidades ul li i
+{
+    font-size: 25px;
+}
+
+#html:hover
+{
+    color:#F5B041;
+} 
+#css:hover
+{
+    color:#5499C7;
+}
+#js:hover
+{
+    color:#F4D03F;
+}
+#php:hover
+{
+    color:#626567;
+}
+#sql:hover
+{
+    color:#A569BD;
+}
+#mongo:hover
+{
+    color:#48C9B0;
+}
+#node:hover
+{
+    color:#239B56;
+}
+#bootstrap:hover
+{
+    color:#7D3C98;
+}
+/*FIN HABILIDADES*/
+
+/*TRABAJOS*/
+.trabajos
+{
+    grid-area: trabajos;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    margin:40px auto;
+}
+
+.trabajos img
+{
+    width: 600px;
+    height: 400px;
+
+}
+
+.carrusel-desciption
+{
+    color: #212F3C;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    opacity: 0;
+    background-color: rgba(124, 252, 156, 0.336);
+}
+
+.carrusel-desciption h4
+{
+    text-transform: uppercase;
+}
+
+.carrusel-desciption:hover
+{
+    opacity: 1;
+}
+
+.btn-carrusel
+{
+    color: #212F3C;
+    border: 1px solid #212F3C;
+    background: none;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn-carrusel:hover
+{
+    color:#fff;
+    background: #212F3C;
+}
+/*FIN TRABAJOS*/
+
+/*CONTACTO*/
+.contacto
+{
+
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+
+    background: #F2F4F4;
+}
+.contacto form
+{
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    color:#212F3C;
+}
+.form-grup
+{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-items: center;
+}
+.form-grup label
+{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.form-grup input
+{
+    width: 200px;
+    background:none;
+    border:none;
+    border-bottom: 1px solid #212F3C;
+}
+.form-grup textarea
+{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.btn-contacto
+{
+    background: none;
+    border:1px solid #212F3C;
+    color:#212F3C;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+}
+.btn-contacto:hover
+{
+    background: #212F3C;
+    color:#fff;
+}
+.hidden
+{
+    visibility: hidden;
+}
+.error
+{   
+   visibility: visible;
+   margin-left: 300px;
+   text-align: center;
+   color:red;
+}
+/*FIN CONTACTO*/
+
+/*FOOTER*/
+footer
+{
+    background-color: #212F3C;
+    color:#fff;
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
+footer h3
+{
+    font-size: 20px;
+}
+footer .redes a
+{
+    margin: 10px;
+    text-decoration: none;
+    color:#fff;
+}
+footer .redes i
+{
+    margin:20px;
+    align-items: center;
+    font-size: 25px;    
+}
+
+/*FIN FOOTER*/
