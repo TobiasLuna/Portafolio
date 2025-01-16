@@ -187,20 +187,22 @@ section
     height: 400px;
 
 }
-/* Estilos para el carrusel de Bootstrap */
+/* Estilo general del carrusel */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Ajusta según el diseño */
+    max-width: 600px; /* Ajusta según sea necesario */
     margin: 0 auto;
 }
 
+/* Imagenes dentro del carrusel */
 .carousel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
+/* Descripción dentro del carrusel */
 .carousel-caption {
     position: absolute;
     bottom: 20px;
@@ -211,12 +213,62 @@ section
     background: rgba(0, 0, 0, 0.6);
     padding: 15px;
     border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Mostrar la descripción al pasar el puntero */
+.carousel-item:hover .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel .carrusel-desciption{
+    display: none;
+}
+
+.carousel:hover .carrusel-desciption{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items:  center;
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.carousel:hover .carrusel-desciption a{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #000;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+/* Botones de navegación */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+}
+
+/* Botón personalizado */
+.btn-carrusel {
+    color: #fff;
+    border: 1px solid #fff;
+    background: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.btn-carrusel:hover {
+    color: #000;
+    background: #fff;
 }
 
 /* Responsividad */
@@ -230,6 +282,7 @@ section
         height: auto;
     }
 }
+
 
 /*FIN TRABAJOS*/
 
