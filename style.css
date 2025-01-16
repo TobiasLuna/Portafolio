@@ -187,112 +187,48 @@ section
     height: 400px;
 
 }
-.carrusel
-{
-    position:relative;
-    width: 350px;
-    height: 300px;
-    background-color: #000;
-    overflow: hidden;
-}
-.carrusel img{
-    height: 100%;
+/* Estilos para el carrusel de Bootstrap */
+.carousel {
+    position: relative;
     width: 100%;
+    max-width: 600px; /* Ajusta según el diseño */
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    scale:1,5s;
-    transition: opacity 0.25s, scale 0.25s;
 }
-.carrusel:hover img{
-    opacity: 0.5;
-    scale:1;
-}
-.carrusel-desciption
-{
-    position:absolute;
-    inset:0;
-    padding: 50px;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 15px;
-    justify-content: center;
-    opacity: 0;
-}
-.carrusel-desciption::before
-{
-    content: '';
+
+.carousel-caption {
     position: absolute;
-    inset: 20px;
-    border:2px solid #fff;
-    opacity: 0;
-    scale: 1.25;
-    transition: opacity 0.25s, scale 0.25s;
-}
-.carrusel:hover .carrusel-desciption
-{
-    opacity: 1;
-    scale:1;
-}
-.carrusel:hover .carrusel-desciption::before
-{
-    opacity: 1;
-    scale:1;
-}
-.carrusel-desciption p
-{
-    font-size: 14px;
-    opacity: 0;
-    translate: -25px;
-    transition: opacity 0.25s, scale 0.25s;
-    text-align: center;
-}
-.carrusel:hover .carrusel-desciption p
-{
-    opacity:1;
-    translate: 0;
-}
-.carrusel-desciption h4
-{
-    text-transform: uppercase;
-}
-
-.btn-carrusel
-{
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
     color: #fff;
-    border: 1px solid #fff;
-    background: none;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor:pointer;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
 
-    opacity: 0;
-    translate: -25px;
-    transition: opacity 0.25s, scale 0.25s;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
-.carrusel:hover .btn-carrusel
-{
-    opacity:1;
-    translate: 0;
-}
-.btn-carrusel:hover
-{
-    color:#000;
-    background: #fff;
-}
-@media only screen and (max-width: 500px)
-{
-    .carrusel-desciption p
-    {
-        width: 300px;
-    }
-    .carrusel
-    {
-    width: 300px;
-    height: 250px;
+
+/* Responsividad */
+@media only screen and (max-width: 768px) {
+    .carousel-caption {
+        font-size: 14px;
+        padding: 10px;
     }
 
+    .carousel-item img {
+        height: auto;
+    }
 }
 
 /*FIN TRABAJOS*/
